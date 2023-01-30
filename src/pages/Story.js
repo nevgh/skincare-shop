@@ -1,12 +1,13 @@
 import React from "react";
 
-const Story = () => {
+const Story = (props) => {
   return (
     <>
       <div className="about-us">
         <img className="lavender" src="Lavender.jpg" alt="" />
         <div style={{ margin: "100px" }}>
-          <h3>Who we are</h3> <br />
+          <h3>Who we are</h3>
+          <br />
           <p>
             Our FLAWLESS skincare is a breakthrough, clean, clinically proven +
             sustainable beauty brand with the ocean at its heart. Our formulas

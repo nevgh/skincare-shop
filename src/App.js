@@ -10,6 +10,9 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  //context 
   const addToCart = () => {
     setCount(count + 1);
   };
@@ -18,7 +21,7 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar count={count} />
-
+        {/* <Slider isVisible={isVisible} setIsVisible={setIsVisible}/>  */}
         <Routes>
           <Route path="/home" element={<Home />} exact />
           <Route
