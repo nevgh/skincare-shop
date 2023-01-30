@@ -13,6 +13,7 @@ const Contact = () => {
     emailjs.sendForm('service_otja1r9', 'template_4t5bg9i', form.current, 'B9vbike64FR1HSNGw')
       .then((result) => {
           console.log(result.text);
+          // redirect to home page.
       }, (error) => {
           console.log(error.text);
       });
