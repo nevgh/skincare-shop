@@ -14,22 +14,6 @@ function App() {
     setCount(count + 1);
   };
 
-  const data = [];
-
-  /*const handleAddClick = () => {
-    for (let i = 0; i < ; i++)
-  }*/
-
-  /*const handleSubtractClick = () => {
-    setQtn(qtn - 1);
-  };*/
-
-  /* const handleDecrementClick = () => {
-    if (addToCart === true) {
-      return count - 1;
-    }
-  };*/
-
   return (
     <>
       <BrowserRouter>
