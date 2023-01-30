@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+ 
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NavBar */
+
+.navbar {
+  background-color: rgb(219, 199, 170);
+  padding: 10px;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  width: 180px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  }
+
+.navbar-list {
+  margin: 20px;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  
+ 
+}
+
+.shopping-bag {
+  position: absolute;
+  top: 185px;
+  width: 50px;
+  display: flex;
+  
+  
+
+}
+
+/* Shop Page */
+
+.productsContainer { 
+  flex: wrap;
+
+}
+.product-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 200px;
+}
+
+li {
+  list-style: none;
+  margin: 20px;
+  
+  
+}
+
+
+.itemList { 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+
+}
+
+.items {
+  width: 200px;
+  height: 260px;
+  margin-top: 50px;
+  padding: 25px;
+}
+
+
+button {
+  border: none;
+  padding: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+}
+
+button:hover {
   color: white;
+  background-color: rgb(219, 199, 170);
 }
 
-.App-link {
-  color: #61dafb;
+section {
+  position: absolute;
+  right: 56px;
+  top: 40px
+
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#itemsCount {
+  font-size: 10px;
 }
+
+/* Our Story */
+
+
+.lavender {
+ width: 30%;
+ height: 50%;
+ margin: 40px;
+ 
+}
+
+
+.about-us {
+  
+
+}
+
+
+
+
+/* Contact Page */
+
+fieldset {
+  border: none;  
+}
+
+.container{
+  margin: 25px auto;
+  
+}
+
+
+input, textarea {
+  width: 100%;
+  height: 2rem;
+  margin: 10px 0 10px 0;
+}
+
+textarea {
+  height: 4rem;
+}
+
+/* Cart Page */
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.cart-container {
+  margin: 60px;
+}
+
+
+
+.itemsIncart {
+
+  width: 80px ;
+  height: 90px;
+  margin-right: 10px;
+ 
+}
+
+th {
+  
+  text-align: left;
+  padding: 5px;
+  background-color: antiquewhite;
+  font-weight: normal;
+
+}
+
+
+td {
+  
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  
+}
+
+td a {
+  font-size: 12px;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: rgb(219, 199, 170);
+  padding: 40px;
+ 
+}
+
