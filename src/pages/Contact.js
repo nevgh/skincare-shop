@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
-
+  /// SAAAEgoOOONs
   const sendEmail = (e) => {
     console.log(
       "sending an email"
