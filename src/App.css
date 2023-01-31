@@ -14,7 +14,7 @@ body {
 /* NavBar */
 
 .navbar {
-  background-color: rgb(219, 199, 170);
+  background-color: rgb(237, 225, 207);
   padding: 10px;
  
 }
@@ -98,7 +98,7 @@ button {
 
 button:hover {
   color: white;
-  background-color: rgb(219, 199, 170);
+  background-color: rgb(237, 225, 207);
 }
 
 section {
@@ -205,8 +205,15 @@ td a {
 /* Footer */
 
 .footer {
-  background-color: rgb(219, 199, 170);
+  background-color: rgb(237, 225, 207);
   padding: 40px;
- 
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media {
+  margin: 30px;
+  
+  
 }
 
