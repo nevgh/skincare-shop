@@ -2,46 +2,44 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-
 }
 
 body {
- 
   color: black;
+}
+
+p {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* NavBar */
 
-.navbar {
+.navbar-container {
   background-color: rgb(237, 225, 207);
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
 }
 
 .logo {
-  width: 180px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  }
+  width: 150px;
+  padding: 10px;
 
-.navbar-list {
-  margin: 20px;
-  padding: 5px;
+}
+
+.navbar-link {
+  margin: 40px;
+  padding: 15px;
   text-decoration: none;
-  color: black;
-  
- 
+  color: black;  
 }
 
 .shopping-bag {
   position: absolute;
-  top: 185px;
+  top: 100px;
   width: 50px;
   display: flex;
-  
-  
 
 }
 
@@ -62,7 +60,6 @@ body {
 li {
   list-style: none;
   margin: 20px;
-  
   
 }
 
@@ -116,20 +113,16 @@ section {
 /* Our Story */
 
 
-.lavender {
+.story-img {
  width: 30%;
  height: 50%;
- margin: 40px;
- 
+ margin: 40px; 
 }
 
-
-.about-us {
+.about-us-container {
   display: flex;
-
+  justify-content: center;
 }
-
-
 
 
 /* Contact Page */
@@ -156,7 +149,7 @@ textarea {
 
 /* Cart Page */
 
-.cart-info {
+/* .cart-info {
   display: flex;
   flex-wrap: wrap;
 
@@ -164,7 +157,6 @@ textarea {
 .cart-container {
   margin: 60px;
 }
-
 
 
 .itemsIncart {
@@ -200,7 +192,7 @@ td input {
 td a {
   font-size: 12px;
 }
-
+ */
 
 /* Footer */
 

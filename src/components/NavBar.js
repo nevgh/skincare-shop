@@ -3,30 +3,28 @@ import { Link } from "react-router-dom";
 
 const NavBar = ({ count }) => {
   return (
-    <div className="navbar">
+    <div className="navbar-container">
       <div>
-        <img src="./flawless-logo.png" className="logo" alt="" />
-      </div>
-      <div style={{ textAlign: "center" }}>
         <ul>
-          <Link className="navbar-list" to="/home">
+          <Link className="navbar-link" to="/home">
             HOME
           </Link>
-          <Link className="navbar-list" to="/shop">
+          <Link className="navbar-link" to="/shop">
             SHOP
           </Link>
-          <Link className="navbar-list" to="/story">
+          <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
+          <Link className="navbar-link" to="/story">
             OUR STORY
           </Link>
-          <Link className="navbar-list" to="/contact">
+          <Link className="navbar-link" to="/contact">
             CONTACT
           </Link>
-          <section className="shopping-bag">
-            <img src="./shopping-bag.png" alt="cart" width={"30px"} />
-            <p style={{ marginTop: "9px" }}>{count}</p>
-          </section>
         </ul>
       </div>
+      <section className="shopping-bag">
+        <img src="./shopping-bag.png" alt="cart" width={"30px"} />
+        <p style={{ marginTop: "7px" }}>{count}</p>
+      </section>
     </div>
   );
 };

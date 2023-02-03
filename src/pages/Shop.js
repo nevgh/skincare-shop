@@ -2,7 +2,7 @@ import React from "react";
 
 import { data } from "../data";
 
-const Shop = ({ addToCart, handleAddClick, handleSubtractClick, qtn }) => {
+const Shop = ({ addToCart }) => {
   return (
     <>
       <div className="product-list">
@@ -24,10 +24,6 @@ const Shop = ({ addToCart, handleAddClick, handleSubtractClick, qtn }) => {
               $ {product.price}
             </span>
             <br />
-            <button onClick={handleAddClick}> + </button>
-            <br />
-            <p>{qtn}</p> <br />
-            <button onClick={handleSubtractClick}> - </button> <br />
             <button
               onClick={() => {
                 addToCart();
