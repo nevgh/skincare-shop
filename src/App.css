@@ -36,11 +36,9 @@ p {
 }
 
 .shopping-bag {
-  position: absolute;
-  top: 100px;
-  width: 50px;
-  display: flex;
-
+  width: 3rem;
+  height: 3rem;
+  position: relative;  
 }
 
 /* Shop Page */

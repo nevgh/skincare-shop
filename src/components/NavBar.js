@@ -21,10 +21,10 @@ const NavBar = ({ count }) => {
           </Link>
         </ul>
       </div>
-      <section className="shopping-bag">
+      <button className="shopping-bag">
         <img src="./shopping-bag.png" alt="cart" width={"30px"} />
-        <p style={{ marginTop: "7px" }}>{count}</p>
-      </section>
+      </button>
+      <p>{count}</p>
     </div>
   );
 };
