@@ -21,9 +21,9 @@ const NavBar = ({ count }) => {
           </Link>
         </ul>
       </div>
-      <button className="shopping-bag">
-        <img src="./shopping-bag.png" alt="cart" width={"30px"} />
-      </button>
+
+      <img src="./shopping-bag.png" alt="cart" width={"30px"} />
+
       <p>{count}</p>
     </div>
   );

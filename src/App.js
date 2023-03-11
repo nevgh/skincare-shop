@@ -5,17 +5,18 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Story from "./pages/Story";
 import Contact from "./pages/Contact";
+import ShoppingCart from "./components/ShoppingCart";
 import Footer from "./components/Footer";
 import "./App.css";
-import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
+  // count of items being added to the cart//
   const [count, setCount] = useState(0);
+
   // const [isVisible, setIsVisible] = useState(false);
 
   const [cart, setCart] = useState([]);
 
-  updateCart(product);
   function updateCart(product) {
     setCart([
       ...cart,
@@ -28,6 +29,7 @@ function App() {
     ]);
   }
 
+  // to show count of cart everytime we add an item to bag//
   const addToCart = () => {
     setCount(count + 1);
   };
@@ -36,6 +38,13 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar count={count} />
+        <ShoppingCart
+          cart={cart}
+          setCart={setCart}
+          count={count}
+          setCount={setCount}
+          updateCart={updateCart}
+        />
 
         {/* <Slider isVisible={isVisible} setIsVisible={setIsVisible}/>  */}
         <Routes>
@@ -43,17 +52,12 @@ function App() {
           <Route
             path="/shop"
             element={
-              <Shop addToCart={addToCart} cart={cart} setCart={setCart} />
+              <Shop addToCart={addToCart} cart={cart} updateCart={updateCart} />
             }
             exact
           />
           <Route path="/story" element={<Story />} exact />
           <Route path="/contact" element={<Contact />} exact />
-          <Route
-            path="/shopping-cart"
-            element={<ShoppingCart cart={cart} setCart={setCart} />}
-            exact
-          />
         </Routes>
       </BrowserRouter>
       <Footer />

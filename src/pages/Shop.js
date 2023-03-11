@@ -1,8 +1,7 @@
 import React from "react";
 import { data } from "../data";
-import { useState } from "react";
 
-const Shop = ({ addToCart }) => {
+const Shop = ({ addToCart, cart, updateCart }) => {
   return (
     <>
       <div className="product-list">
@@ -27,6 +26,7 @@ const Shop = ({ addToCart }) => {
             <button
               onClick={() => {
                 addToCart();
+                updateCart(product);
               }}
               className="button"
             >
