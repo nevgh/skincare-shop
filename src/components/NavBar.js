@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ count }) => {
+const NavBar = ({ itemCount }) => {
   return (
     <div className="navbar-container">
       <div>
@@ -24,7 +24,7 @@ const NavBar = ({ count }) => {
 
       <img src="./shopping-bag.png" alt="cart" width={"30px"} />
 
-      <p>{count}</p>
+      <p>{itemCount}</p>
     </div>
   );
 };

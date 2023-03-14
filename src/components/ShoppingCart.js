@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const ShoppingCart = ({ cart, count, setCount }) => {
-  const [itemCount, SetItemCount] = useState(1);
-
+const ShoppingCart = ({ cart, itemCount, SetItemCount }) => {
   function handleDecrementBtn() {
     if (itemCount > 1) SetItemCount(itemCount - 1);
   }
@@ -14,7 +12,6 @@ const ShoppingCart = ({ cart, count, setCount }) => {
 
   function removeProductBtn() {
     SetItemCount(0);
-    setCount(cart.length);
   }
   return (
     <>

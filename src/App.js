@@ -10,8 +10,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  // count of items being added to the cart//
-  const [count, setCount] = useState(0);
+  const [itemCount, SetItemCount] = useState([]);
 
   // const [isVisible, setIsVisible] = useState(false);
 
@@ -29,21 +28,20 @@ function App() {
     ]);
   }
 
-  // to show count of cart everytime we add an item to bag//
   const addToCart = () => {
-    setCount(count + 1);
+    SetItemCount(itemCount + 1);
   };
 
   return (
     <>
       <BrowserRouter>
-        <NavBar count={count} />
+        <NavBar itemCount={itemCount} />
         <ShoppingCart
           cart={cart}
           setCart={setCart}
-          count={count}
-          setCount={setCount}
           updateCart={updateCart}
+          itemCount={itemCount}
+          SetItemCount={SetItemCount}
         />
 
         {/* <Slider isVisible={isVisible} setIsVisible={setIsVisible}/>  */}
@@ -52,7 +50,13 @@ function App() {
           <Route
             path="/shop"
             element={
-              <Shop addToCart={addToCart} cart={cart} updateCart={updateCart} />
+              <Shop
+                addToCart={addToCart}
+                cart={cart}
+                updateCart={updateCart}
+                itemCount={itemCount}
+                SetItemCount={SetItemCount}
+              />
             }
             exact
           />

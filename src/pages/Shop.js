@@ -1,7 +1,7 @@
 import React from "react";
 import { data } from "../data";
 
-const Shop = ({ addToCart, cart, updateCart }) => {
+const Shop = ({ addToCart, updateCart }) => {
   return (
     <>
       <div className="product-list">
