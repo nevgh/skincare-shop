@@ -10,11 +10,14 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  const [itemCount, SetItemCount] = useState([]);
-
-  // const [isVisible, setIsVisible] = useState(false);
+  // counter for items in cart //
+  const [itemCount, setItemCount] = useState();
 
   const [cart, setCart] = useState([]);
+
+  // counter for items quantity //
+  const [itemQuantity, setItemQuantity] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   function updateCart(product) {
     setCart([
@@ -24,24 +27,33 @@ function App() {
         img: product.img,
         name: product.name,
         price: product.price,
+        quantity: product.quantity,
       },
     ]);
   }
 
   const addToCart = () => {
-    SetItemCount(itemCount + 1);
+    setItemQuantity(itemQuantity + 1);
   };
 
   return (
     <>
       <BrowserRouter>
-        <NavBar itemCount={itemCount} />
+        <NavBar
+          itemQuantity={itemQuantity}
+          setIsOpen={setIsOpen}
+          isOpen={isOpen}
+          cart={cart}
+        />
         <ShoppingCart
           cart={cart}
           setCart={setCart}
           updateCart={updateCart}
-          itemCount={itemCount}
-          SetItemCount={SetItemCount}
+          setItemCount={setItemCount}
+          itemQuantity={itemQuantity}
+          setItemQuantity={setItemQuantity}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
         />
 
         {/* <Slider isVisible={isVisible} setIsVisible={setIsVisible}/>  */}
@@ -55,7 +67,7 @@ function App() {
                 cart={cart}
                 updateCart={updateCart}
                 itemCount={itemCount}
-                SetItemCount={SetItemCount}
+                setItemCount={setItemCount}
               />
             }
             exact

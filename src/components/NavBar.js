@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ itemCount }) => {
+const NavBar = ({ cart, setIsOpen, isOpen }) => {
   return (
     <div className="navbar-container">
       <div>
@@ -22,9 +22,14 @@ const NavBar = ({ itemCount }) => {
         </ul>
       </div>
 
-      <img src="./shopping-bag.png" alt="cart" width={"30px"} />
+      <img
+        onClick={() => setIsOpen(!isOpen)}
+        src="./shopping-bag.png"
+        alt="cart"
+        width={"30px"}
+      />
 
-      <p>{itemCount}</p>
+      <p>{cart.length}</p>
     </div>
   );
 };
