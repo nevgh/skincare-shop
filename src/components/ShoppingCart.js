@@ -23,7 +23,7 @@ const ShoppingCart = ({
   function removeProductBtn(p) {
     const newCart = cart.filter((item) => item.id !== p.id);
     setCart(newCart);
-    setItemCount(cart.length);
+    setItemCount(newCart.length);
   }
 
   return (
@@ -45,30 +45,27 @@ const ShoppingCart = ({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <div
-          style={{
-            padding: "10px",
-            borderBottom: "3px solid rgb(237, 225, 207)",
-            display: "inline-block",
-          }}
-        >
-          <h2>Your Cart</h2>
-          <button
-            style={{ justifyContent: "right" }}
-            onClick={() => setIsOpen(!isOpen)}
+        <div style={{ display: "flex" }}>
+          <div
+            style={{
+              padding: "10px",
+              borderBottom: "1px solid rgb(237, 225, 207)",
+              justifyContent: "space-evenly",
+            }}
           >
-            X
-          </button>
+            <h2>Your Cart</h2>
+            <button onClick={() => setIsOpen(!isOpen)}>X</button>
+          </div>
         </div>
 
         {cart.map((p) => (
           <div key={p.id}>
-            <img width="30px" src={p.img} />
+            <img width="50px" src={p.img} />
             <h2>{p.name}</h2>
             <p>$ {p.price}</p>
-            <button onClick={() => handleDecrementBtn()}>-</button>
-            <span>0</span>
-            <button onClick={() => handleIncrementBtn()}>+</button>
+            <button onClick={handleDecrementBtn}>-</button>
+            <span>{itemQuantity}</span>
+            <button onClick={handleIncrementBtn}>+</button>
             <button onClick={() => removeProductBtn(p)}>Remove</button>
           </div>
         ))}

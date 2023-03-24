@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ cart, setIsOpen, isOpen }) => {
+const NavBar = ({ cart, setIsOpen, isOpen, itemQuantity }) => {
   return (
     <div className="navbar-container">
       <div>
@@ -28,8 +28,7 @@ const NavBar = ({ cart, setIsOpen, isOpen }) => {
         alt="cart"
         width={"30px"}
       />
-
-      <p>{cart.length}</p>
+      <p>{itemQuantity}</p>
     </div>
   );
 };

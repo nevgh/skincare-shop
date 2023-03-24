@@ -11,12 +11,12 @@ import "./App.css";
 
 function App() {
   // counter for items in cart //
-  const [itemCount, setItemCount] = useState();
+  const [itemCount, setItemCount] = useState(0);
 
   const [cart, setCart] = useState([]);
-
   // counter for items quantity //
   const [itemQuantity, setItemQuantity] = useState(0);
+  //shopping cart slider
   const [isOpen, setIsOpen] = useState(false);
 
   function updateCart(product) {
@@ -27,7 +27,6 @@ function App() {
         img: product.img,
         name: product.name,
         price: product.price,
-        quantity: product.quantity,
       },
     ]);
   }
