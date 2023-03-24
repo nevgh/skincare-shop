@@ -37,7 +37,7 @@ const ShoppingCart = ({
           width: 300,
           height: "100%",
           backgroundColor: "white",
-          border: "1px solid black",
+          border: ".5px grey",
           transition: "right 0.3s ease-in-out",
           zIndex: 1,
           boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
@@ -45,9 +45,20 @@ const ShoppingCart = ({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <div style={{ padding: "10px", borderBottom: "1px solid black" }}>
-          <h2>Shopping Cart</h2>
-          <button onClick={() => setIsOpen(!isOpen)}>Close</button>
+        <div
+          style={{
+            padding: "10px",
+            borderBottom: "3px solid rgb(237, 225, 207)",
+            display: "inline-block",
+          }}
+        >
+          <h2>Your Cart</h2>
+          <button
+            style={{ justifyContent: "right" }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            X
+          </button>
         </div>
 
         {cart.map((p) => (
