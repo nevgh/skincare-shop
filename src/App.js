@@ -20,26 +20,62 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   function updateCart(product) {
-    setCart([
-      ...cart,
-      {
-        id: product.id,
-        img: product.img,
-        name: product.name,
-        price: product.price,
-      },
-    ]);
+    const existingProduct = cart.find((i) => {
+      return i.id === product.id;
+    });
+
+    if (existingProduct === undefined) {
+      setCart([
+        ...cart,
+        {
+          id: product.id,
+          img: product.img,
+          name: product.name,
+          price: product.price,
+          count: 1,
+        },
+      ]);
+    } else {
+      const newcart = cart.map((item) => {
+        if (item.id === product.id) {
+          item.count = item.count + 1;
+        }
+        return item;
+      });
+
+      setCart(newcart);
+    }
   }
 
   const addToCart = () => {
     setItemQuantity(itemQuantity + 1);
   };
 
+  const reduceCount = () => {
+    const totalCount = cart.reduce((total, item) => {
+      total = item.count + total;
+      return total;
+    }, 0);
+
+    return totalCount;
+  };
+
+  // const getCount = () => {
+  //   let totalCount = 0;
+
+  //   cart.map((item) => {
+  //     totalCount = totalCount + item.count;
+  //   });
+
+  //   return totalCount;
+  // };
+
   return (
     <>
       <BrowserRouter>
         <NavBar
-          itemQuantity={itemQuantity}
+          //itemQuantity={itemQuantity}
+          itemQuantity={reduceCount()}
           setIsOpen={setIsOpen}
           isOpen={isOpen}
           cart={cart}

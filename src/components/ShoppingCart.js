@@ -4,26 +4,24 @@ const ShoppingCart = ({
   cart,
   setCart,
   setItemCount,
-  itemQuantity,
-  setItemQuantity,
+  updateCart,
   isOpen,
   setIsOpen,
 }) => {
-  function handleDecrementBtn() {
-    if (itemQuantity > 1) {
-      setItemQuantity(itemQuantity - 1);
-    }
-    setItemCount(cart.length);
-  }
+  function handleDecrementBtn(p) {
+    const newcart = cart.filter((item) => {
+      if (item.id === p.id && item.count > 0) {
+        item.count = item.count - 1;
+      }
+      return item;
+    });
 
-  function handleIncrementBtn() {
-    setItemQuantity(itemQuantity + 1);
+    setCart(newcart);
   }
 
   function removeProductBtn(p) {
     const newCart = cart.filter((item) => item.id !== p.id);
     setCart(newCart);
-    setItemCount(newCart.length);
   }
 
   return (
@@ -63,9 +61,9 @@ const ShoppingCart = ({
             <img width="50px" src={p.img} />
             <h2>{p.name}</h2>
             <p>$ {p.price}</p>
-            <button onClick={handleDecrementBtn}>-</button>
-            <span>{itemQuantity}</span>
-            <button onClick={handleIncrementBtn}>+</button>
+            <button onClick={() => handleDecrementBtn(p)}>-</button>
+            <span>{p.count}</span>
+            <button onClick={() => updateCart(p)}>+</button>
             <button onClick={() => removeProductBtn(p)}>Remove</button>
           </div>
         ))}
