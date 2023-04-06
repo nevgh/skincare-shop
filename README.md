@@ -66,7 +66,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ##### This project is Awesome
-designed by Sargon Saadi The Great.
+designed Nevean Ghatas The Great.
 
 ### `npm run build` fails to minify
 
