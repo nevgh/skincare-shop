@@ -60,21 +60,10 @@ function App() {
     return totalCount;
   };
 
-  // const getCount = () => {
-  //   let totalCount = 0;
-
-  //   cart.map((item) => {
-  //     totalCount = totalCount + item.count;
-  //   });
-
-  //   return totalCount;
-  // };
-
   return (
     <>
       <BrowserRouter>
         <NavBar
-          //itemQuantity={itemQuantity}
           itemQuantity={reduceCount()}
           setIsOpen={setIsOpen}
           isOpen={isOpen}
@@ -91,7 +80,6 @@ function App() {
           setIsOpen={setIsOpen}
         />
 
-        {/* <Slider isVisible={isVisible} setIsVisible={setIsVisible}/>  */}
         <Routes>
           <Route path="/home" element={<Home />} exact />
           <Route
