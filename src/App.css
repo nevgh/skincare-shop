@@ -2,7 +2,7 @@
 
 body {
   color: black;
-  margin: 0;
+
   font-family: 'Comfortaa', cursive;;
 }
 
@@ -156,7 +156,5 @@ textarea {
 
 .social-media {
   margin: 30px;
-  
-  
 }
 
