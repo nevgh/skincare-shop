@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  // counter for items in cart //
   const [itemCount, setItemCount] = useState(0);
 
   const [cart, setCart] = useState([]);
