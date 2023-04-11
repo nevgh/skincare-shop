@@ -16,7 +16,7 @@ const Shop = ({ addToCart, updateCart }) => {
                 objectFit: "cover",
                 marginBottom: "15px",
               }}
-            />{" "}
+            />
             <br />
             <span style={{ fontWeight: "bold" }}>{product.name}</span>
             <span style={{ float: "right", marginRight: "10px" }}>

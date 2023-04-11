@@ -1,9 +1,9 @@
 body {
   color: black;
   margin: 0;
-  font-family: 'Comfortaa', cursive;;
- 
+  font-family: 'Comfortaa', cursive;
 }
+
 p {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -11,16 +11,13 @@ p {
 /* NavBar */
 
 nav {
-  background-color: rgb(237, 225, 207);
-
- 
+  background-color: rgb(237, 225, 207); 
 }
 
 .logo {
-width: 100px;
+width: 95px;
 margin-left: 20px;
 margin-top: 30px;
-
 }
 
 ul {
@@ -32,10 +29,8 @@ ul {
   padding: .25rem;
   text-decoration: none;
   color: black; 
-  font-size:small;
   font-weight:700;
-  
-
+  font-size: .7rem;
 }
 
 section {
@@ -49,6 +44,22 @@ section {
   padding: 10px;
 
 } */
+
+
+/* Home Page */
+
+.home-img {
+  width: 100%;
+}
+
+.home-para{
+  margin: 0;
+  padding: 10px;
+}
+
+.home-button{
+  margin: 10px;
+}
 
 
 
@@ -66,26 +77,6 @@ section {
   justify-content: space-around;
   margin: 50px 200px;
 }
-
-li {
-  list-style: none;
-  margin: 20px;
-}
-
-
-.itemList { 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.items {
-  width: 200px;
-  height: 260px;
-  margin-top: 50px;
-  padding: 25px;
-}
-
 
 button {
   border: none;
@@ -167,18 +158,14 @@ textarea {
   background-color: rgb(237, 225, 207);
   display: flex;
   justify-content: space-between;
+  font-weight: 700;
+  padding: 30px;
+
 }
 
 .footer-list{
-  padding-top: 10px;
-  padding-left: 43px;
-}
-
-.social-media{
-  padding-top: 10px;
-  padding-right: 40px;
-}
-
-.social-media-icons{
-  padding: 3px;
+  font-size: .7rem;
+  list-style-type: none;
+  padding-left: 5px;
+  font-weight: 600;
 }
