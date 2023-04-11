@@ -4,7 +4,6 @@ body {
   font-family: 'Comfortaa', cursive;;
  
 }
-
 p {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -13,31 +12,34 @@ p {
 
 nav {
   background-color: rgb(237, 225, 207);
-  height: 150px;
+
+ 
 }
 
 .logo {
-width: 95px;
-margin-left: 30px;
-margin-top: 40px;
+width: 100px;
+margin-left: 20px;
+margin-top: 30px;
+
 }
-
-
 
 ul {
   display: flex;
   flex-direction: column;
-  float: right;
 }
 
 .navbar-link {
-  padding: .15rem;
+  padding: .25rem;
   text-decoration: none;
-  color: black;  
+  color: black; 
+  font-size:small;
+  font-weight:700;
+  
+
 }
 
 section {
-  margin-left: 40px;
+  padding-left: 43px;
   padding-bottom: 10px;
 }
 
@@ -122,7 +124,7 @@ button:hover {
 }
 
 .story-para {
-  padding: 20px;
+  padding: 25px;
 }
 
 
@@ -163,12 +165,20 @@ textarea {
 
 .footer {
   background-color: rgb(237, 225, 207);
-  padding: 40px;
   display: flex;
   justify-content: space-between;
 }
 
+.footer-list{
+  padding-top: 10px;
+  padding-left: 43px;
+}
 
-.social-media {
-  margin: 30px;
+.social-media{
+  padding-top: 10px;
+  padding-right: 40px;
+}
+
+.social-media-icons{
+  padding: 3px;
 }

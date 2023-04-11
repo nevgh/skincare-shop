@@ -7,25 +7,25 @@ const NavBar = ({ setIsOpen, isOpen, itemQuantity }) => {
     <>
       <nav>
         <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
-        <section>
-          <AiFillShopping onClick={() => setIsOpen(!isOpen)} />
-          <span>{itemQuantity}</span>
-        </section>
         <div>
           <ul>
             <Link className="navbar-link" to="/">
-              Home
+              HOME
             </Link>
             <Link className="navbar-link" to="/shop">
-              Shop
+              SHOP
             </Link>
             <Link className="navbar-link" to="/story">
-              Story
+              STORY
             </Link>
             <Link className="navbar-link" to="/contact">
-              Contact
+              CONTACT
             </Link>
           </ul>
+          <section>
+            <AiFillShopping onClick={() => setIsOpen(!isOpen)} />
+            <span>{itemQuantity}</span>
+          </section>
         </div>
       </nav>
     </>
