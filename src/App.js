@@ -80,7 +80,7 @@ function App() {
         />
 
         <Routes>
-          <Route path="/home" element={<Home />} exact />
+          <Route path="/" element={<Home />} exact />
           <Route
             path="/shop"
             element={

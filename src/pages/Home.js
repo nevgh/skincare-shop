@@ -15,11 +15,11 @@ const Home = () => {
     { url: Floral, title: "floral" },
   ];
 
-  const containerStyles = {
-    width: "900px",
-    height: "300px",
-    margin: "50px",
-  };
+  // const containerStyles = {
+  //   width: "600px",
+  //   height: "300px",
+  //   margin: 0,
+  // };
 
   return (
     <div
@@ -41,9 +41,9 @@ const Home = () => {
         nature has to offer.
       </p>
       <br />
-      <div style={containerStyles}>
+      {/* <div>
         <ImageSlider slides={slides} />
-      </div>
+      </div> */}
     </div>
   );
 };

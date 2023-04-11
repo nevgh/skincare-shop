@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ShoppingCart = ({
   cart,
@@ -38,8 +38,6 @@ const ShoppingCart = ({
           border: ".5px grey",
           transition: "right 0.3s ease-in-out",
           zIndex: 1,
-          boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)",
-          backdropFilter: isOpen ? "blur(10px)" : "none",
           opacity: isOpen ? 1 : 0,
         }}
       >
@@ -58,7 +56,7 @@ const ShoppingCart = ({
 
         {cart.map((p) => (
           <div key={p.id}>
-            <img width="50px" src={p.img} />
+            <img width="50px" src={p.img} alt="" />
             <h2>{p.name}</h2>
             <p>$ {p.price}</p>
             <button onClick={() => handleDecrementBtn(p)}>-</button>

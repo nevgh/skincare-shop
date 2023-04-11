@@ -1,35 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiFillShopping } from "react-icons/ai";
 
-const NavBar = ({ cart, setIsOpen, isOpen, itemQuantity }) => {
+const NavBar = ({ setIsOpen, isOpen, itemQuantity }) => {
   return (
-    <div className="navbar-container">
-      <div>
-        <ul>
-          <Link className="navbar-link" to="/home">
-            HOME
-          </Link>
-          <Link className="navbar-link" to="/shop">
-            SHOP
-          </Link>
-          <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
-          <Link className="navbar-link" to="/story">
-            OUR STORY
-          </Link>
-          <Link className="navbar-link" to="/contact">
-            CONTACT
-          </Link>
-        </ul>
-      </div>
-
-      <img
-        onClick={() => setIsOpen(!isOpen)}
-        src="./shopping-bag.png"
-        alt="cart"
-        width={"30px"}
-      />
-      <p>{itemQuantity}</p>
-    </div>
+    <>
+      <nav>
+        <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
+        <section>
+          <AiFillShopping onClick={() => setIsOpen(!isOpen)} />
+          <span>{itemQuantity}</span>
+        </section>
+        <div>
+          <ul>
+            <Link className="navbar-link" to="/">
+              Home
+            </Link>
+            <Link className="navbar-link" to="/shop">
+              Shop
+            </Link>
+            <Link className="navbar-link" to="/story">
+              Story
+            </Link>
+            <Link className="navbar-link" to="/contact">
+              Contact
+            </Link>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 };
 
