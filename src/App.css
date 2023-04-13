@@ -116,12 +116,35 @@ button:hover {
   justify-content: space-between;
   padding-left: 1rem;
   padding-top: 2rem;
+  border-bottom: .1rem solid rgb(237, 225, 207);
 }
 
 .cart-x-button {
   margin-right: 1rem;
-  width: 30px;
+  width: 2rem;
+  height: 2rem;
+
 }
+
+.product-info {
+  float: right;
+}
+
+.cart-img {
+  object-fit: cover;
+  width: 100px;
+  height: 110px;
+}
+
+.product-name {
+  font-size: .9rem;
+}
+
+
+
+
+
+
 
 
 /* Our Story */

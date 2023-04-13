@@ -42,21 +42,23 @@ const ShoppingCart = ({
         }}
       >
         <section id="cart-header">
-          <h3>Your Cart</h3>
+          <h3 style={{ paddingTop: "10px" }}>Your Cart</h3>
           <button className="cart-x-button" onClick={() => setIsOpen(!isOpen)}>
-            X
+            x
           </button>
         </section>
-        <div>
+        <div style={{ padding: "10px" }}>
           {cart.map((p) => (
             <div key={p.id}>
-              <img width="50px" src={p.img} alt="" />
-              <h2>{p.name}</h2>
-              <p>$ {p.price}</p>
-              <button onClick={() => handleDecrementBtn(p)}>-</button>
-              <span>{p.count}</span>
-              <button onClick={() => updateCart(p)}>+</button>
-              <button onClick={() => removeProductBtn(p)}>Remove</button>
+              <img className="cart-img" src={p.img} alt="products-images" />
+              <div className="product-info">
+                <h2 className="product-name">{p.name}</h2>
+                <p>$ {p.price}</p>
+                <button onClick={() => handleDecrementBtn(p)}> - </button>
+                <span>{p.count}</span>
+                <button onClick={() => updateCart(p)}> + </button>
+                <button onClick={() => removeProductBtn(p)}>Remove</button>
+              </div>
             </div>
           ))}
         </div>
