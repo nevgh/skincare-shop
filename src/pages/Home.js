@@ -31,7 +31,7 @@ const Home = () => {
     //   justifyContent: "space-around",
     // }}
     >
-      <h3>FROM THE BLOG</h3>
+      <h3 className="home-header">FROM THE BLOG</h3>
       <div>
         <img className="home-img" src={Roses} alt="roses" />
         <p className="home-para">

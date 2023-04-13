@@ -7,16 +7,7 @@ const Shop = ({ addToCart, updateCart }) => {
       <div className="product-list">
         {data.map((product) => (
           <div key={product.id} style={{ margin: "20px" }}>
-            <img
-              src={product.img}
-              alt=""
-              style={{
-                width: "200px",
-                height: "300px",
-                objectFit: "cover",
-                marginBottom: "15px",
-              }}
-            />
+            <img src={product.img} alt="" className="shop-img" />
             <br />
             <span style={{ fontWeight: "bold" }}>{product.name}</span>
             <span style={{ float: "right", marginRight: "10px" }}>

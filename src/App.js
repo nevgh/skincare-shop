@@ -11,7 +11,6 @@ import "./App.css";
 
 function App() {
   const [itemCount, setItemCount] = useState(0);
-
   const [cart, setCart] = useState([]);
   // counter for items quantity //
   const [itemQuantity, setItemQuantity] = useState(0);

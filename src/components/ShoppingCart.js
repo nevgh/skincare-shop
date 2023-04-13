@@ -41,30 +41,25 @@ const ShoppingCart = ({
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              padding: "10px",
-              borderBottom: "1px solid rgb(237, 225, 207)",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <h2>Your Cart</h2>
-            <button onClick={() => setIsOpen(!isOpen)}>X</button>
-          </div>
+        <section id="cart-header">
+          <h3>Your Cart</h3>
+          <button className="cart-x-button" onClick={() => setIsOpen(!isOpen)}>
+            X
+          </button>
+        </section>
+        <div>
+          {cart.map((p) => (
+            <div key={p.id}>
+              <img width="50px" src={p.img} alt="" />
+              <h2>{p.name}</h2>
+              <p>$ {p.price}</p>
+              <button onClick={() => handleDecrementBtn(p)}>-</button>
+              <span>{p.count}</span>
+              <button onClick={() => updateCart(p)}>+</button>
+              <button onClick={() => removeProductBtn(p)}>Remove</button>
+            </div>
+          ))}
         </div>
-
-        {cart.map((p) => (
-          <div key={p.id}>
-            <img width="50px" src={p.img} alt="" />
-            <h2>{p.name}</h2>
-            <p>$ {p.price}</p>
-            <button onClick={() => handleDecrementBtn(p)}>-</button>
-            <span>{p.count}</span>
-            <button onClick={() => updateCart(p)}>+</button>
-            <button onClick={() => removeProductBtn(p)}>Remove</button>
-          </div>
-        ))}
       </div>
     </>
   );

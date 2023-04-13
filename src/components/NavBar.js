@@ -22,7 +22,7 @@ const NavBar = ({ setIsOpen, isOpen, itemQuantity }) => {
               CONTACT
             </Link>
           </ul>
-          <section>
+          <section id="cart-icon-section">
             <AiFillShopping onClick={() => setIsOpen(!isOpen)} />
             <span>{itemQuantity}</span>
           </section>

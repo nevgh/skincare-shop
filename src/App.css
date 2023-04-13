@@ -33,7 +33,7 @@ ul {
   font-size: .7rem;
 }
 
-section {
+#cart-icon-section {
   padding-left: 43px;
   padding-bottom: 10px;
 }
@@ -48,8 +48,14 @@ section {
 
 /* Home Page */
 
+.home-header{
+  padding: 10px;
+}
 .home-img {
+  object-fit: cover;
   width: 100%;
+  height: 22rem;
+  
 }
 
 .home-para{
@@ -68,8 +74,15 @@ section {
 
 .productsContainer { 
   flex: wrap;
-
 }
+
+.shop-img {
+    width: 200px;
+    height: 300px;
+    object-fit: "cover";
+    margin-bottom: 15px;
+}
+
 .product-list{
   display: flex;
   flex-direction: row;
@@ -96,12 +109,22 @@ button:hover {
   background-color: rgb(237, 225, 207);
 }
 
-#itemsCount {
-  font-size: 10px;
+/* Shopping Cart Page*/
+
+#cart-header{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-top: 2rem;
 }
 
-/* Our Story */
+.cart-x-button {
+  margin-right: 1rem;
+  width: 30px;
+}
 
+
+/* Our Story */
 
 .about-us-container {
   display: flex;
