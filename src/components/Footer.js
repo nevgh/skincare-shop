@@ -1,33 +1,31 @@
 import React from "react";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div>
-        <h3>Customer Care</h3>
-        <p>Contact Us</p>
-        <p>1-888-442-5830</p>
-        <p>Track Your Order</p>
-        <p>Shipping & Delivery</p>
+        <h5>CUSTOMER CARE</h5>
+        <ul className="footer-list">
+          <li>FAQS</li>
+          <br></br>
+          <li>Track Order</li>
+          <br></br>
+          <li>Shipping</li>
+          <br></br>
+          <li>Contact Us</li>
+          <br></br>
+        </ul>
       </div>
-
-      <div className="social-media">
-        <h4>Follow us</h4>
-        <img
-          src="./instagram.png"
-          alt="instagram"
-          style={{ width: "20px", margin: "5px" }}
-        />
-        <img
-          src="./tiktok.png"
-          alt="tiktok"
-          style={{ width: "20px", margin: "5px" }}
-        />
-        <img
-          src="./linkedin.png"
-          alt="linkedin"
-          style={{ width: "20px", margin: "5px" }}
-        />
+      <div>
+        <h5>FOLLOW US</h5>
+        <div>
+          <FaInstagramSquare />
+          <FaTwitterSquare />
+          <FaFacebookSquare />
+        </div>
       </div>
     </div>
   );

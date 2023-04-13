@@ -11,7 +11,6 @@ import "./App.css";
 
 function App() {
   const [itemCount, setItemCount] = useState(0);
-
   const [cart, setCart] = useState([]);
   // counter for items quantity //
   const [itemQuantity, setItemQuantity] = useState(0);
@@ -80,7 +79,7 @@ function App() {
         />
 
         <Routes>
-          <Route path="/home" element={<Home />} exact />
+          <Route path="/" element={<Home />} exact />
           <Route
             path="/shop"
             element={

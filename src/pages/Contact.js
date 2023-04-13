@@ -31,23 +31,15 @@ const Contact = () => {
     console.log(<p>Message Sent</p>);
   };
   return (
-    <div style={{ width: "40%", margin: "0 auto" }}>
+    <div className="contact-us-div">
       <div>
-        <h1
-          style={{
-            marginTop: "60px",
-            marginBottom: "30px",
-            textAlign: "center",
-          }}
-        >
-          CONTACT US
-        </h1>
-        <p>
+        <h3 className="contact-us-h3">CONTACT US</h3>
+        <p className="contact-para">
           Have a question? Check out our FAQ page as your question may be
-          answered there. Still need help? Contact us below.
+          answered there. Still need help? Please contact us below.
         </p>
       </div>
-      <div className="container">
+      <div>
         <form ref={form} onSubmit={sendEmail}>
           <fieldset>
             <label for="name">Name</label>

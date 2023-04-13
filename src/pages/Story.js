@@ -8,10 +8,10 @@ const Story = () => {
     <>
       <div className="about-us-container">
         <img className="story-img" src={Lavender} alt="lavender" />
-        <div style={{ margin: "60px" }}>
+        <div className="story-para">
           <h3>Who We Are</h3>
           <br />
-          <p style={{ width: "450px" }}>
+          <p>
             Our FLAWLESS skincare is founded on the belief that what you put on
             your skin is just as important as what you put in your body. That's
             why we only use the finest natural ingredients, sourced from trusted
@@ -32,10 +32,11 @@ const Story = () => {
         </div>
       </div>
       <div className="about-us-container">
-        <div style={{ margin: "60px" }}>
+        <img className="story-img" src={Chamomile} alt="chamomile" />
+        <div className="story-para">
           <h3>Clean & Sustainable</h3>
           <br />
-          <p style={{ width: "450px" }}>
+          <p>
             At our natural skincare brand, we believe that using natural
             ingredients is the key to achieving healthy, glowing skin. Our
             products are made with only the finest, all-natural ingredients,
@@ -55,14 +56,13 @@ const Story = () => {
           </p>
           <br />
         </div>
-        <img className="story-img" src={Chamomile} alt="chamomile" />
       </div>
       <div className="about-us-container">
         <img className="story-img" src={OilHand} alt="oil" />
-        <div style={{ margin: "60px" }}>
+        <div className="story-para">
           <h3>Clinically Proven</h3>
           <br />
-          <p style={{ width: "450px" }}>
+          <p>
             Working with researchers at leading universities, including Carnegie
             Mellon and Cornell, we work to leverage the very latest in
             anti-aging science and identify breakthrough botanical extracts
