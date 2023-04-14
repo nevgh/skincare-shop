@@ -1,13 +1,6 @@
 import React from "react";
 
-const ShoppingCart = ({
-  cart,
-  setCart,
-  setItemCount,
-  updateCart,
-  isOpen,
-  setIsOpen,
-}) => {
+const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
   function handleDecrementBtn(p) {
     const newcart = cart.filter((item) => {
       if (item.id === p.id && item.count > 0) {
@@ -37,7 +30,6 @@ const ShoppingCart = ({
         border: ".5px grey",
         transition: "right 0.3s ease-in-out",
         zIndex: 1,
-        opacity: isOpen ? 1 : 0,
       }}
     >
       <section id="cart-header">
@@ -52,7 +44,7 @@ const ShoppingCart = ({
             <img className="cart-img" src={p.img} alt="products-images" />
             <div className="inside-product-info">
               <h2 className="product-name">{p.name}</h2>
-              <span>$ {p.price}</span> <br></br>
+              <span style={{ margin: 3 }}>$ {p.price}</span>
               <div className="cart-button-div">
                 <button
                   className="inside-cart-button"
@@ -60,7 +52,7 @@ const ShoppingCart = ({
                 >
                   -
                 </button>
-                <span>{p.count}</span>
+                <span style={{ margin: 3 }}>{p.count}</span>
                 <button
                   className="inside-cart-button"
                   onClick={() => updateCart(p)}

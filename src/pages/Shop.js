@@ -5,11 +5,11 @@ const Shop = ({ addToCart, updateCart }) => {
   return (
     <div className="product-list">
       {data.map((product) => (
-        <div key={product.id} style={{ margin: "20px" }}>
+        <div key={product.id} style={{ margin: 20 }}>
           <img src={product.img} alt="shop-images" className="shop-img" />
           <br />
           <span style={{ fontWeight: "bold" }}>{product.name}</span>
-          <span style={{ float: "right", marginRight: "10px" }}>
+          <span style={{ float: "right", marginRight: 10 }}>
             $ {product.price}
           </span>
           <br />

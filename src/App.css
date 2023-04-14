@@ -64,10 +64,16 @@ ul {
 }
 
 .home-readmore-button{
+  border: none;
+  padding: 8px;
   margin: 10px;
+  cursor: pointer;
 }
 
-
+.home-readmore-button:hover {
+  color: white;
+  background-color: rgb(237, 225, 207);
+}
 
 
 /* Shop Page */
@@ -116,7 +122,6 @@ ul {
   padding-top: 2rem;
   border-bottom: .1rem solid rgb(237, 225, 207);
 }
-
 .cart-x-button {
   border: none;
   cursor: pointer;
@@ -130,7 +135,6 @@ ul {
   color: white;
   background-color: rgb(237, 225, 207);
 }
-
 
 .cart-product-info {
   display: flex;
@@ -163,7 +167,6 @@ ul {
   padding: 5px;
   margin: 2px;
 }
-
 
 .inside-cart-button:hover {
   color: white;
@@ -223,6 +226,19 @@ input, textarea {
 
 textarea {
   height: 4rem;
+}
+
+
+.send-button {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover{
+  color: white;
+  background-color: rgb(237, 225, 207);
 }
 
 

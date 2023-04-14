@@ -62,7 +62,7 @@ const Home = () => {
           Unlock the Secret to Glowing Skin: Miracle Ingredient That Soothes,
           Nourishes and Restores Your Complexion to Its Natural Radiance
         </p>
-        <button className="home-button">Read More</button>
+        <button className="home-readmore-button">Read More</button>
       </div>
     </div>
   );

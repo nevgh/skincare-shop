@@ -53,7 +53,11 @@ const Contact = () => {
             <br />
             <textarea type="text" name="message"></textarea>
             <br />
-            <button onSubmit={handleSubmitClick} type="submit">
+            <button
+              className="send-button"
+              onSubmit={handleSubmitClick}
+              type="submit"
+            >
               Send
             </button>
           </fieldset>
