@@ -38,7 +38,7 @@ const Home = () => {
           Revitalize Your Skin with the Power of Nature: Experience the
           Nourishing Benefits of Our All-Natural Skincare Products
         </p>
-        <button className="home-button">Read More</button>
+        <button className="home-readmore-button">Read More</button>
       </div>
       <div>
         <img className="home-img" src={SmearCream} alt="smear-cream-beige" />
@@ -46,14 +46,14 @@ const Home = () => {
           The Ultimate Guide to Natural Skincare: How to Achieve a Flawless,
           Radiant Complexion Using Only the Best Ingredients from Mother Nature
         </p>
-        <button className="home-button">Read More</button>
+        <button className="home-readmore-button">Read More</button>
       </div>
       <div>
         <img className="home-img" src={Aloevera} alt="aloevera" />
         <p className="home-para">
           Unlock the Power of Aloe Vera: The Miraculous Benefits for Your Skin
         </p>
-        <button className="home-button">Read More</button>
+        <button className="home-readmore-button">Read More</button>
       </div>
 
       <div>
@@ -62,7 +62,7 @@ const Home = () => {
           Unlock the Secret to Glowing Skin: Miracle Ingredient That Soothes,
           Nourishes and Restores Your Complexion to Its Natural Radiance
         </p>
-        <button className="home-button">Read More</button>
+        <button className="home-readmore-button">Read More</button>
       </div>
     </div>
   );

@@ -51,11 +51,11 @@ ul {
 .home-header{
   padding: 10px;
 }
+
 .home-img {
   object-fit: cover;
   width: 100%;
   height: 22rem;
-  
 }
 
 .home-para{
@@ -63,18 +63,20 @@ ul {
   padding: 10px;
 }
 
-.home-button{
+.home-readmore-button{
+  border: none;
+  padding: 8px;
   margin: 10px;
+  cursor: pointer;
 }
 
-
+.home-readmore-button:hover {
+  color: white;
+  background-color: rgb(237, 225, 207);
+}
 
 
 /* Shop Page */
-
-.productsContainer { 
-  flex: wrap;
-}
 
 .shop-img {
     width: 200px;
@@ -91,7 +93,7 @@ ul {
   margin: 50px 200px;
 }
 
-button {
+.shop-add-button {
   border: none;
   padding: 8px;
   margin-top: 20px;
@@ -104,10 +106,12 @@ button {
   padding: 10px;
 }
 
-button:hover {
+.shop-add-button:hover {
   color: white;
   background-color: rgb(237, 225, 207);
 }
+
+
 
 /* Shopping Cart Page*/
 
@@ -116,12 +120,62 @@ button:hover {
   justify-content: space-between;
   padding-left: 1rem;
   padding-top: 2rem;
+  border-bottom: .1rem solid rgb(237, 225, 207);
+}
+.cart-x-button {
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-.cart-x-button {
-  margin-right: 1rem;
-  width: 30px;
+.cart-x-button:hover {
+  color: white;
+  background-color: rgb(237, 225, 207);
 }
+
+.cart-product-info {
+  display: flex;
+  margin: 1rem;
+}
+
+.inside-product-info {
+  margin-left: 1rem;
+  font-size: .8rem;
+}
+
+.cart-img {
+  object-fit: cover;
+  width: 100px;
+  height: 110px;
+}
+
+.product-name {
+  font-size: .8rem;
+  margin-top: 1rem;
+}
+
+.cart-button-div {
+  margin-top: 10px;
+}
+
+.inside-cart-button{
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 2px;
+}
+
+.inside-cart-button:hover {
+  color: white;
+  background-color: rgb(237, 225, 207);
+}
+
+
+
+
 
 
 /* Our Story */
@@ -172,6 +226,19 @@ input, textarea {
 
 textarea {
   height: 4rem;
+}
+
+
+.send-button {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover{
+  color: white;
+  background-color: rgb(237, 225, 207);
 }
 
 
