@@ -2,14 +2,17 @@ import React from "react";
 
 const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
   function handleDecrementBtn(p) {
-    const newcart = cart.filter((item) => {
-      if (item.id === p.id && item.count > 0) {
-        item.count = item.count - 1;
-      }
-      return item;
-    });
-
-    setCart(newcart);
+    if (p.count > 1) {
+      const newcart = cart.filter((item) => {
+        if (item.id === p.id) {
+          item.count = item.count - 1;
+        }
+        return item;
+      });
+      setCart(newcart);
+    } else if (p.count === 1) {
+      removeProductBtn(p);
+    }
   }
 
   function removeProductBtn(p) {
