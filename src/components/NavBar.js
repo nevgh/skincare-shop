@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillShopping } from "react-icons/ai";
 
-const NavBar = ({ setIsOpen, isOpen, itemQuantity }) => {
+const NavBar = ({ setIsOpen, isOpen, itemQuantity, cart }) => {
+  const handleOpenCart = () => {
+    if (cart.length !== 0) setIsOpen(!isOpen);
+  };
   return (
     <nav>
       <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
@@ -22,7 +25,7 @@ const NavBar = ({ setIsOpen, isOpen, itemQuantity }) => {
           </Link>
         </ul>
         <section id="cart-icon-section">
-          <AiFillShopping onClick={() => setIsOpen(!isOpen)} />
+          <AiFillShopping onClick={handleOpenCart} />
           <span>{itemQuantity}</span>
         </section>
       </div>
