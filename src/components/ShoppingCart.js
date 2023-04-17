@@ -4,7 +4,7 @@ import { IoIosClose } from "react-icons/io";
 const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
   useEffect(() => {
     if (cart.length === 0) {
-      setIsOpen(!isOpen);
+      setIsOpen(false);
     }
   }, [cart]);
 
@@ -50,7 +50,7 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
         <h3>Your Cart</h3>
         <IoIosClose
           className="cart-x-button"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(false)}
         />
       </section>
       <div>
