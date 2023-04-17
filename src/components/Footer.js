@@ -21,10 +21,16 @@ const Footer = () => {
       </div>
       <div>
         <h5>FOLLOW US</h5>
-        <div>
-          <FaInstagramSquare />
-          <FaTwitterSquare />
-          <FaFacebookSquare />
+        <div className="social-media-icons">
+          <a href="https://www.instagram.com">
+            <FaInstagramSquare />
+          </a>
+          <a href="https://twitter.com/">
+            <FaTwitterSquare />
+          </a>
+          <a href="https://www.facebook.com/">
+            <FaFacebookSquare />
+          </a>
         </div>
       </div>
     </div>
