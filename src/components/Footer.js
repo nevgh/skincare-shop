@@ -22,13 +22,13 @@ const Footer = () => {
       <div>
         <h5>FOLLOW US</h5>
         <div className="social-media-icons">
-          <a href="https://www.instagram.com">
+          <a href="https://www.instagram.com" target="_blank">
             <FaInstagramSquare />
           </a>
-          <a href="https://twitter.com/">
+          <a href="https://twitter.com/" target="_blank">
             <FaTwitterSquare />
           </a>
-          <a href="https://www.facebook.com/">
+          <a href="https://www.facebook.com/" target="_blank">
             <FaFacebookSquare />
           </a>
         </div>
