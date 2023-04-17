@@ -8,7 +8,9 @@ const NavBar = ({ setIsOpen, isOpen, itemQuantity, cart }) => {
   };
   return (
     <nav>
-      <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
+      <Link to="/">
+        <img src="./flawless-logo.png" className="logo" alt="flawless-logo" />
+      </Link>
       <div>
         <ul>
           <Link className="navbar-link" to="/">
