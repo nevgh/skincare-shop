@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { IoIosClose } from "react-icons/io";
 
 const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
-  function handleDecrementBtn(p) {
-    const newcart = cart.filter((item) => {
-      if (item.id === p.id && item.count > 0) {
-        item.count = item.count - 1;
-      }
-      return item;
-    });
+  useEffect(() => {
+    if (cart.length === 0) {
+      setIsOpen(false);
+    }
+  }, [cart]);
 
-    setCart(newcart);
+  function handleDecrementBtn(p) {
+    if (p.count > 1) {
+      const newcart = cart.map((item) => {
+        if (item.id === p.id) {
+          item.count = item.count - 1;
+        }
+        return item;
+      });
+      setCart(newcart);
+    } else if (p.count === 1) {
+      removeProductBtn(p);
+    }
   }
 
   function removeProductBtn(p) {
     const newCart = cart.filter((item) => item.id !== p.id);
     setCart(newCart);
+  }
+
+  function handleClearCart() {
+    setCart([]);
   }
 
   return (
@@ -34,11 +48,17 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
     >
       <section id="cart-header">
         <h3>Your Cart</h3>
-        <button className="cart-x-button" onClick={() => setIsOpen(!isOpen)}>
-          x
-        </button>
+        <IoIosClose
+          className="cart-x-button"
+          onClick={() => setIsOpen(false)}
+        />
       </section>
       <div>
+        {cart.length > 0 && (
+          <button className="clear-all-button" onClick={handleClearCart}>
+            remove all
+          </button>
+        )}
         {cart.map((p) => (
           <div className="cart-product-info" key={p.id}>
             <img className="cart-img" src={p.img} alt="products-images" />
