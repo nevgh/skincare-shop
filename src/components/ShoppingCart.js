@@ -33,6 +33,7 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
 
   return (
     <div
+      className="scrollbar"
       style={{
         position: "fixed",
         top: 0,
@@ -40,6 +41,7 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
         right: isOpen ? 0 : -300,
         width: 300,
         height: "100%",
+        overflowY: "auto",
         backgroundColor: "white",
         border: ".5px grey",
         transition: "right 0.3s ease-in-out",
