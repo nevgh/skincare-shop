@@ -11,6 +11,7 @@ export const data = [
     img: Oilserum,
     name: "Collagen Serum",
     price: 25,
+    limit: 5,
   },
 
   {
@@ -18,6 +19,7 @@ export const data = [
     img: Buttercream,
     name: "Butter Cream",
     price: 15,
+    limit: 4,
   },
 
   {
@@ -25,23 +27,27 @@ export const data = [
     img: Vitamins,
     name: "Vitamins C Serum",
     price: 30,
+    limit: 3,
   },
   {
     id: 4,
     img: Bodysoap,
     name: "Body Soap",
     price: 20,
+    limit: 6,
   },
   {
     id: 5,
     img: BodyWellness,
     name: "Body Wellness Kit",
     price: 45,
+    limit: 2,
   },
   {
     id: 6,
     img: Facesoaps,
     name: "Face Soap",
     price: 25,
+    limit: 4,
   },
 ];

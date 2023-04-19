@@ -10,11 +10,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  const [itemCount, setItemCount] = useState(0);
   const [cart, setCart] = useState([]);
-
-  // counter for items quantity //
-  const [itemQuantity, setItemQuantity] = useState(0);
 
   //shopping cart slider
   const [isOpen, setIsOpen] = useState(false);
@@ -33,30 +29,25 @@ function App() {
           name: product.name,
           price: product.price,
           count: 1,
+          limit: product.limit,
         },
       ]);
     } else {
       const newcart = cart.map((item) => {
-        if (item.id === product.id) {
+        if (item.id === product.id && item.count < product.limit) {
           item.count = item.count + 1;
         }
         return item;
       });
-
       setCart(newcart);
     }
   }
-
-  const addToCart = () => {
-    setItemQuantity(itemQuantity + 1);
-  };
 
   const reduceCount = () => {
     const totalCount = cart.reduce((total, item) => {
       total = item.count + total;
       return total;
     }, 0);
-
     return totalCount;
   };
 
@@ -73,9 +64,6 @@ function App() {
           cart={cart}
           setCart={setCart}
           updateCart={updateCart}
-          setItemCount={setItemCount}
-          itemQuantity={itemQuantity}
-          setItemQuantity={setItemQuantity}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
@@ -84,15 +72,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route
             path="/shop"
-            element={
-              <Shop
-                addToCart={addToCart}
-                cart={cart}
-                updateCart={updateCart}
-                itemCount={itemCount}
-                setItemCount={setItemCount}
-              />
-            }
+            element={<Shop cart={cart} updateCart={updateCart} />}
             exact
           />
           <Route path="/story" element={<Story />} exact />
