@@ -31,6 +31,13 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
     setCart([]);
   }
 
+  const totalPrice = cart.reduce((totalPrice, product) => {
+    totalPrice = totalPrice + product.count * product.price;
+    return totalPrice;
+  }, 0);
+
+  const totalPlusTax = totalPrice + totalPrice * 0.07;
+
   return (
     <div
       className="scrollbar"
@@ -48,13 +55,16 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
         zIndex: 1,
       }}
     >
-      <section id="cart-header">
-        <h3>Your Cart</h3>
-        <IoIosClose
-          className="cart-x-button"
-          onClick={() => setIsOpen(false)}
-        />
-      </section>
+      <div className="top-cart-section">
+        <section id="cart-header">
+          <h3>Your Cart</h3>
+          <IoIosClose
+            className="cart-x-button"
+            onClick={() => setIsOpen(false)}
+          />
+        </section>
+      </div>
+
       <div>
         {cart.length > 0 && (
           <button className="clear-all-button" onClick={handleClearCart}>
@@ -91,6 +101,17 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="cart-summary">
+        <section className="total-section">
+          <p> Total </p>
+          <p> $ {totalPrice}</p>
+        </section>
+        <section className="total-section">
+          <p>7% TAX</p>
+          <p>$ {totalPlusTax}</p>
+        </section>
+        <button className="checkout-button">Complete Checkout</button>
       </div>
     </div>
   );

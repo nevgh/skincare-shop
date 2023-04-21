@@ -1,7 +1,7 @@
 import React from "react";
 import { data } from "../data";
 
-const Shop = ({ addToCart, updateCart }) => {
+const Shop = ({ updateCart }) => {
   return (
     <div className="product-list">
       {data.map((product) => (
@@ -15,7 +15,6 @@ const Shop = ({ addToCart, updateCart }) => {
           <br />
           <button
             onClick={() => {
-              addToCart();
               updateCart(product);
             }}
             className="shop-add-button"
