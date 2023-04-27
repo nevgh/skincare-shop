@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 
-const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
+const ShoppingCart = ({ cart, setCart, isOpen, setIsOpen }) => {
   useEffect(() => {
     if (cart.length === 0) {
       setIsOpen(false);
@@ -19,6 +19,34 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
       setCart(newcart);
     } else if (p.count === 1) {
       removeProductBtn(p);
+    }
+  }
+
+  function handleIncrementBtn(p) {
+    const existingProduct = cart.find((i) => {
+      return i.id === p.id;
+    });
+
+    if (existingProduct === undefined) {
+      setCart([
+        ...cart,
+        {
+          id: p.id,
+          img: p.img,
+          name: p.name,
+          price: p.price,
+          count: 1,
+          limit: p.limit,
+        },
+      ]);
+    } else {
+      const newcart = cart.map((item) => {
+        if (item.id === p.id && item.count < p.limit) {
+          item.count = item.count + 1;
+        }
+        return item;
+      });
+      setCart(newcart);
     }
   }
 
@@ -64,7 +92,6 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
           />
         </section>
       </div>
-
       <div>
         {cart.length > 0 && (
           <button className="clear-all-button" onClick={handleClearCart}>
@@ -87,7 +114,7 @@ const ShoppingCart = ({ cart, setCart, updateCart, isOpen, setIsOpen }) => {
                 <span style={{ margin: 3 }}>{p.count}</span>
                 <button
                   className="inside-cart-button"
-                  onClick={() => updateCart(p)}
+                  onClick={() => handleIncrementBtn(p)}
                 >
                   +
                 </button>

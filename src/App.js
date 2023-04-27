@@ -11,37 +11,8 @@ import "./App.css";
 
 function App() {
   const [cart, setCart] = useState([]);
-
   //shopping cart slider
   const [isOpen, setIsOpen] = useState(false);
-
-  function updateCart(product) {
-    const existingProduct = cart.find((i) => {
-      return i.id === product.id;
-    });
-
-    if (existingProduct === undefined) {
-      setCart([
-        ...cart,
-        {
-          id: product.id,
-          img: product.img,
-          name: product.name,
-          price: product.price,
-          count: 1,
-          limit: product.limit,
-        },
-      ]);
-    } else {
-      const newcart = cart.map((item) => {
-        if (item.id === product.id && item.count < product.limit) {
-          item.count = item.count + 1;
-        }
-        return item;
-      });
-      setCart(newcart);
-    }
-  }
 
   const reduceCount = () => {
     const totalCount = cart.reduce((total, item) => {
@@ -63,7 +34,6 @@ function App() {
         <ShoppingCart
           cart={cart}
           setCart={setCart}
-          updateCart={updateCart}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
@@ -72,7 +42,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route
             path="/shop"
-            element={<Shop cart={cart} updateCart={updateCart} />}
+            element={<Shop cart={cart} setCart={setCart} />}
             exact
           />
           <Route path="/story" element={<Story />} exact />
