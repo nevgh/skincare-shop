@@ -1,27 +1,12 @@
 import React from "react";
-import { data } from "../data";
+import { data } from "../data.js";
+import Product from "../components/Product.js";
 
-const Shop = ({ updateCart }) => {
+const Shop = ({ cart, setCart }) => {
   return (
     <div className="product-list">
       {data.map((product) => (
-        <div key={product.id} style={{ margin: 20 }}>
-          <img src={product.img} alt="shop-images" className="shop-img" />
-          <br />
-          <span style={{ fontWeight: "bold" }}>{product.name}</span>
-          <span style={{ float: "right", marginRight: 10 }}>
-            $ {product.price}
-          </span>
-          <br />
-          <button
-            onClick={() => {
-              updateCart(product);
-            }}
-            className="shop-add-button"
-          >
-            add to cart
-          </button>
-        </div>
+        <Product product={product} cart={cart} setCart={setCart} />
       ))}
     </div>
   );

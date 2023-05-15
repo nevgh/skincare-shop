@@ -7,10 +7,9 @@ const Story = () => {
   return (
     <>
       <div className="about-us-container">
-        <img className="story-img" src={Lavender} alt="lavender" />
-        <div className="story-para">
-          <h3>Who We Are</h3>
-          <br />
+        <img className="about-img" src={Lavender} alt="lavender" />
+        <div className="about-para">
+          <h3 className="about-header">Who We Are</h3>
           <p>
             Our FLAWLESS skincare is founded on the belief that what you put on
             your skin is just as important as what you put in your body. That's
@@ -27,15 +26,13 @@ const Story = () => {
             satisfied with your purchase, simply let us know and we'll make it
             right.
           </p>
-          <br />
           <p>Look Good. Feel Good. Do Good.</p>
         </div>
       </div>
       <div className="about-us-container">
-        <img className="story-img" src={Chamomile} alt="chamomile" />
-        <div className="story-para">
-          <h3>Clean & Sustainable</h3>
-          <br />
+        <img className="about-img" src={Chamomile} alt="chamomile" />
+        <div className="about-para">
+          <h3 className="about-header">Clean & Sustainable</h3>
           <p>
             At our natural skincare brand, we believe that using natural
             ingredients is the key to achieving healthy, glowing skin. Our
@@ -48,20 +45,18 @@ const Story = () => {
             can trust that our products are made with the highest quality,
             all-natural ingredients to deliver the best possible results. We
             believe that by using nature's best ingredients, we can help you
-            achieve the healthy, radiant skin you deserve. <br /> <br />
+            achieve the healthy, radiant skin you deserve.
             <p>
               Safety and sustainability is not a destination, it's a journey
               upon which we are continually improving on.
             </p>
           </p>
-          <br />
         </div>
       </div>
       <div className="about-us-container">
-        <img className="story-img" src={OilHand} alt="oil" />
-        <div className="story-para">
-          <h3>Clinically Proven</h3>
-          <br />
+        <img className="about-img" src={OilHand} alt="oil" />
+        <div className="about-para">
+          <h3 className="about-header">Clinically Proven</h3>
           <p>
             Working with researchers at leading universities, including Carnegie
             Mellon and Cornell, we work to leverage the very latest in
@@ -69,7 +64,7 @@ const Story = () => {
             known to be rich in antioxidants, vitamins, and essential fatty
             acids. We pack and squeeze as many of these biocompatible
             plant-actives into our formulas and then put them to the test in
-            third-party clinical trials. <br /> <br />
+            third-party clinical trials.
             <p>
               We believe the results speak for themselves. Our products are
               clinically proven to outperform leading anti-aging skincare
